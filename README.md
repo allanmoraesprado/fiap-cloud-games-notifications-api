@@ -4,9 +4,12 @@ Notifications microservice for the FIAP Cloud Games Phase 2 platform. It is a
 **Kafka consumer** that simulates sending e-mails by **logging them to the
 console** (no SMTP, no real e-mail provider — intentional for this academic MVP).
 
-> **Milestone status: M5.** Consumes `fcg.users.created` (welcome e-mail) **and**
-> `fcg.payments.processed` (purchase confirmation on **Approved** only). Both under
-> group `notifications-service`. No Kubernetes manifests yet.
+Stateless .NET 8 consumer that **simulates e-mails by logging to the console** (no
+SMTP). Consumes **`UserCreatedEvent`** (welcome) and **`PaymentProcessedEvent`**
+(purchase confirmation, on **Approved** only), both under group
+`notifications-service`. Runs via Docker Compose and on local Kubernetes (see
+`k8s/`); for the full system runbook, see the
+**`fiap-cloud-games-orchestration`** repository.
 
 Part of the five-repository solution (`users-api`, `catalog-api`,
 `payments-api`, `notifications-api`, `orchestration`).
