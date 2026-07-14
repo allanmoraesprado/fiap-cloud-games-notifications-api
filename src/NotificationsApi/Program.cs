@@ -14,7 +14,9 @@ builder.Host.UseSerilog();
 
 builder.Services.Configure<KafkaSettings>(builder.Configuration.GetSection("Kafka"));
 builder.Services.AddSingleton<WelcomeEmailNotifier>();
+builder.Services.AddSingleton<PurchaseConfirmationNotifier>();
 builder.Services.AddHostedService<UserCreatedConsumer>();
+builder.Services.AddHostedService<PaymentProcessedConsumer>();
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
