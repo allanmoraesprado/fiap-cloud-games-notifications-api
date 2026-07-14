@@ -6,7 +6,6 @@ using Microsoft.Extensions.Options;
 
 namespace NotificationsApi.Consumers;
 
-// Consumes fcg.users.created and logs a simulated welcome e-mail (at-least-once).
 public class UserCreatedConsumer : BackgroundService
 {
     private readonly KafkaSettings _settings;

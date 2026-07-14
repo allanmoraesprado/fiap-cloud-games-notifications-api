@@ -1,6 +1,5 @@
 namespace NotificationsApi.Contracts;
 
-// Canonical reference: orchestration/contracts/README.md (mirrored copy). Consumed.
 public record PaymentProcessedEvent(
     Guid EventId,
     Guid OrderId,
