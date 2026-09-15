@@ -66,9 +66,9 @@ No secrets are used (local Kafka is PLAINTEXT).
 
 ---
 
-## Run locally (uses the M0 Kafka)
+## Run locally (uses the Compose Kafka)
 
-1. Start the M0 infrastructure (orchestration repo): `docker compose up -d`.
+1. Start the infrastructure (orchestration repo): `docker compose up -d`.
 2. Run the consumer:
    ```bash
    dotnet run --project src/NotificationsApi --urls http://localhost:8081
