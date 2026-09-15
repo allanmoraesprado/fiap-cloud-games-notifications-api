@@ -1,5 +1,13 @@
 # FIAP Cloud Games — Notifications API
 
+> **Phase 2 history.** This service was the Phase 2 notifications consumer. In **Phase 3** it
+> was **replaced in the main flow by the serverless
+> [`fiap-cloud-games-notifications-function`](https://github.com/allanmoraesprado/fiap-cloud-games-notifications-function)**
+> (Azure Functions, Kafka trigger, consumer group `notifications-function`). This repository is
+> kept unchanged as history (tag `phase-2`): it is no longer started by the orchestration
+> Compose by default (only under the `phase2-legacy` profile) and is not part of the Phase 3
+> Kubernetes flow. Do not run it together with the function against the same Kafka.
+
 Notifications microservice for the FIAP Cloud Games Phase 2 platform. It is a
 **Kafka consumer** that simulates sending e-mails by **logging them to the
 console** (no SMTP, no real e-mail provider — intentional for this academic MVP).
